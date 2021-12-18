@@ -1,5 +1,5 @@
 {% set name = "salesforce-merlion" %}
-{% set version = "1.0.2" %}
+{% set version = "1.1.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 036647366bdc725caf0008d426d615b9f4e47a41fa15aa0d1f8e4998f7530f57
+  sha256: 31a80c46cb115fb78483f246beca56966e6585a2a52e400205335dc570cfad48
 
 build:
   noarch: python
