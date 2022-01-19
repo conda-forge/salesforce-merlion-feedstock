@@ -44,6 +44,10 @@ test:
   imports:
     - merlion
     - merlion.evaluate
+  commands:
+    - pip list | grep -E '{{ name }}\s+{{ version }}'
+  requires:
+    - pip
 
 about:
   home: https://github.com/salesforce/Merlion
