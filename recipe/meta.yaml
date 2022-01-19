@@ -1,5 +1,5 @@
 {% set name = "salesforce-merlion" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 31a80c46cb115fb78483f246beca56966e6585a2a52e400205335dc570cfad48
+  sha256: 4b25e50c2cd9c91c6fb78a44196b8590c59ffe82019d7f02224fe4d0bee8a0d1
 
 build:
   noarch: python
@@ -44,10 +44,14 @@ test:
   imports:
     - merlion
     - merlion.evaluate
+  commands:
+    - pip list | grep -E '{{ name }}\s+{{ version }}'
+  requires:
+    - pip
 
 about:
   home: https://github.com/salesforce/Merlion
-  doc_url: https://opensource.salesforce.com/Merlion/v1.0.0/index.html
+  doc_url: https://opensource.salesforce.com/Merlion/latest/index.html
   summary: A Machine Learning Framework for Time Series Intelligence
   license: BSD-3-Clause
   license_file: LICENSE
