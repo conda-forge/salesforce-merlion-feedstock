@@ -51,7 +51,7 @@ test:
 
 about:
   home: https://github.com/salesforce/Merlion
-  doc_url: https://opensource.salesforce.com/Merlion/v1.0.0/index.html
+  doc_url: https://opensource.salesforce.com/Merlion/latest/index.html
   summary: A Machine Learning Framework for Time Series Intelligence
   license: BSD-3-Clause
   license_file: LICENSE
