@@ -9,7 +9,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/salesforce-merl
 
 Summary: A Machine Learning Framework for Time Series Intelligence
 
-Documentation: https://opensource.salesforce.com/Merlion/v1.0.0/index.html
+Documentation: https://opensource.salesforce.com/Merlion/latest/index.html
 
 Merlion is a Python library for time series intelligence. It
  features a unified interface for many commonly used models and
