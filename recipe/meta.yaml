@@ -1,5 +1,5 @@
 {% set name = "salesforce-merlion" %}
-{% set version = "1.1.2" %}
+{% set version = "1.1.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d872c16fd6d96e17df85fe949d9027397c6f4e3e078c5c299d98612c33439779
+  sha256: 174febbe07ff33b553ab1785529c68b0ea22761a24771b7d4479702c938beef0
 
 build:
   noarch: python
@@ -18,24 +18,21 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.7
   run:
-    - cmdstanpy
+    - cython
     - dill
-    - fbprophet
     - gitpython
-    - llvm-openmp
     - lightgbm
     - matplotlib-base
-    - numpy !=1.18
-    - jpype1 ==1.0.2
+    - numpy >=1.21
+    - packaging
     - pandas >=1.1.0
-    - plotly >=4.13
-    - pystan <3.0
-    - python >=3.6
-    - pytorch >=1.1.0
+    - py4j >=0.10.9.2
+    - pytest
+    - python >=3.7
     - scikit-learn >=0.22
-    - scipy >=1.5.0
+    - scipy >=1.6.0
     - setuptools-git
     - statsmodels >=0.12.2
     - tqdm
@@ -45,7 +42,7 @@ test:
     - merlion
     - merlion.evaluate
   commands:
-    - pip list | grep -E '{{ name }}\s+{{ version }}'
+    - pip check
   requires:
     - pip
 
