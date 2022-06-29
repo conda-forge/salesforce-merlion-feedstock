@@ -1,5 +1,5 @@
 {% set name = "salesforce-merlion" %}
-{% set version = "1.2.2" %}
+{% set version = "1.2.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4ec942665330f4849ca4b54a4b52e68f8946e5b6298b22b7f07191a439a74483
+  sha256: f099b82fdd596158d33739ef4c5242f24eb5e97803da116195f0c27c51676797
 
 build:
   noarch: python
@@ -28,12 +28,11 @@ requirements:
     - numpy >=1.21
     - packaging
     - pandas >=1.1.0
+    - prophet >=1.1
     - py4j >=0.10.9.2
-    - pytest
     - python >=3.7
     - scikit-learn >=0.22
     - scipy >=1.6.0
-    - setuptools-git
     - statsmodels >=0.12.2
     - tqdm
 
